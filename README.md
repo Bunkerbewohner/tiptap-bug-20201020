@@ -1,4 +1,4 @@
-# Tiptap Bug: Links break while converting between HTML and yDoc using
+# Tiptap Bug: Broken Image Links
 
 **Summary**: Links break while converting between HTML and yDoc using TiptapTransformer.
 
