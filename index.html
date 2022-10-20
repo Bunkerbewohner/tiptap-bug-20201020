@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Example</title>
+    <!-- diff2html files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/diff2html/dist/diff2html.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/diff2html/dist/diff2html.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f0f0f0;
+        }
+
+        code {
+            white-space: pre-wrap;
+        }
+
+        .compare {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .compare > div {
+            flex: 1;
+            margin: 5px;
+            background: #f0f0f0;
+            overflow: auto;
+        }
+
+        #original-html, #generated-html, #editor {
+            background: white;
+            display: block;
+            overflow: auto;
+        }
+
+        img {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<script type="module" src="index.ts"></script>
+<div id="diff"></div>
+<div class="compare">
+    <div>
+        <h1>Original HTML</h1>
+        <p>Generated from Markdown via <code>markdown-it</code></p>
+
+        <code id="original-html"></code>
+    </div>
+    <div>
+        <h1>Tiptap Editor</h1>
+        <p>Initialized from Original HTML</p>
+
+        <div id="editor"></div>
+    </div>
+    <div>
+        <h1>HTML from Editor</h1>
+        <p>Original HTML &rArr; yDoc &rArr; TiptapTransformer / fromHTML</p>
+
+        <code id="generated-html"></code>
+    </div>
+</div>
+</body>
+</html>
